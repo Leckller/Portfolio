@@ -55,7 +55,6 @@ export const MAIN = styled.main`
 export const BIG_SECTION = styled.section`
   width: 48%;
   height: 600px;
-  border: solid black 1px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,18 +65,18 @@ export const BIG_SECTION = styled.section`
   h2{
     font-size: 2rem;
     margin-bottom: 30px;
-} p{
+  }
+  p{
   font-size: 1.2rem;
-}
+  }
 `;
 
 export const SMALL_SECTION = styled.section`
   width: 30%;
-  border: solid black 1px;
   height: 600px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: end;
   justify-content: start;
   padding: 20px;
   line-height: 22px;
@@ -85,6 +84,25 @@ export const SMALL_SECTION = styled.section`
     font-size: 2rem;
     margin-bottom: 30px;
   }
+  div:nth-child(2){
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: end;
+    line-height: 40px;
+    a{
+      color: #8f8f8f;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 500ms;
+    }
+    a:hover{
+      text-decoration: underline;
+      color: white;
+      transition: 500ms;
+    }
+} 
 `;
 
 export const FOOTER = styled.footer`

@@ -55,12 +55,15 @@ function Home() {
         <SMALL_SECTION>
           <h2>Meus Projetos</h2>
           <article>
+            <button>Ordenar por data de criação</button>
             <div>
-              <button>Ordenar por data de criação</button>
+              { [{ name: 'ruyTunes', path: '/' },
+                { name: 'Jogo da Velha', path: '/' },
+                { name: 'Ghibli Animations', path: '/' },
+              ].map((e) => (
+                <Link to="/" key={ e.path }>{e.name}</Link>
+              )) }
             </div>
-            {['itens'] && ['itens'].map((e) => (
-              <Link to="/" key={ e }>{e}</Link>
-            )) }
           </article>
         </SMALL_SECTION>
         <SMALL_SECTION>
