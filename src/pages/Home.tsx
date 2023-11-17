@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable react/jsx-max-depth */
 import { Link } from 'react-router-dom';
-import { BIG_SECTION, GLOBAL_BG, HEADER, MAIN, SMALL_SECTION } from '../styles';
+import { BIG_SECTION, FOOTER, GLOBAL_BG, HEADER, MAIN, SMALL_SECTION } from '../styles';
 
 function Home() {
   return (
@@ -8,8 +9,8 @@ function Home() {
       <HEADER>
         <button>=</button>
         <nav>
-          <button>link</button>
-          <button>link</button>
+          <button><i className="bi bi-linkedin" /></button>
+          <button><i className="bi bi-github" /></button>
         </nav>
       </HEADER>
       <MAIN>
@@ -76,8 +77,8 @@ function Home() {
             icons
           </article>
         </BIG_SECTION>
+        <FOOTER />
       </MAIN>
-      <footer />
     </GLOBAL_BG>
   );
 }
