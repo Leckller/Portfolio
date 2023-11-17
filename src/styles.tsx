@@ -9,34 +9,43 @@ const rotate = keyframes`
   }
 `;
 
-export const Logo = styled.img`
-height: 6em;
-padding: 1.5em;
-will-change: filter;
-transition: filter 300ms;
-&:hover{
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
+export const GLOBAL_BG = styled.div`
+  width: 100vw;
+  height: 100vh;
 `;
 
-export const React = styled(Logo)`
-&:hover{
-  filter: drop-shadow(0 0 2em #61dafbaa);
-  animation: ${rotate} 3s linear infinite;
-}
+export const HEADER = styled.header`
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-flow: nowrap row;
+  justify-content: space-between;
+  button{
+    margin: 0 30px;
+  }
+  nav{
+    margin-right: 20px;
+  }
 `;
 
-export const Trybe = styled(Logo)`
-&:hover{
-  filter: drop-shadow(0 0 2em #78d691aa);
-  animation: ${rotate} 3s linear infinite;
-}
+export const MAIN = styled.main`
+  display: flex;
+  flex-flow: wrap row;
+  gap: 5%;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 `;
 
-export const Card = styled.div`
-padding: 2em;
+export const BIG_SECTION = styled.section`
+  width: 48%;
+  height: 600px;
+  border: solid black 1px;
 `;
 
-export const Docs = styled.p`
-color: #888;
+export const SMALL_SECTION = styled.section`
+  width: 30%;
+  border: solid black 1px;
+  height: 600px;
 `;
