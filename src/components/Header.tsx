@@ -2,8 +2,11 @@ import { NavLink } from 'react-router-dom';
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 
 function Header() {
+  const header = document.querySelector('header');
+  console.log(header);
+
   return (
-    <header className="flex flex-row justify-between p-5">
+    <header id="header" className="flex flex-row justify-between p-5">
       <img src="" alt="R" />
       <nav>
         <NavLink

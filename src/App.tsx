@@ -10,6 +10,7 @@ function App() {
       margin: 0;
       padding: 0;
       box-sizing: 0;
+      scroll-behavior: smooth;
     }
   `;
   return (
