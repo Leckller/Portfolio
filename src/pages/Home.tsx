@@ -8,7 +8,7 @@ import { ANC, LabelAnc } from '../styles';
 function Home() {
   const text = 'Olá, me chamo Ruy ;D';
   const text2 = 'Sou um desenvolvedor web apaixonado por transformar ideias criativas em experiências digitais incríveis.';
-  const writeT1 = useWriteText(text, 50);
+  const writeT1 = useWriteText(text, 40);
   const writeT2 = useWriteText(text2, 20, writeT1 >= text.length);
 
   return (
@@ -17,8 +17,8 @@ function Home() {
       <section className="w-full h-screen flex items-start justify-center">
         <article className="flex flex-col items-center gap-10">
 
-          <h1 className="text-5xl">{text.slice(0, writeT1)}</h1>
-          <h2>{writeT1 >= text.length ? text2.slice(0, writeT2) : ''}</h2>
+          <h1 className="text-5xl">{`${text.slice(0, writeT1)}${writeT1 >= text.length ? '' : '|'}`}</h1>
+          <h2>{writeT1 >= text.length ? `${text2.slice(0, writeT2)}${writeT2 >= text2.length ? '' : '|'}` : ''}</h2>
 
           {writeT2 >= text2.length ? (
             <LabelAnc
