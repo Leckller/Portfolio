@@ -23,3 +23,34 @@ export const LabelAnc = styled.label`
     }
   }
 `;
+
+type OceanDivType = {
+  left: string;
+  time: number;
+};
+
+export const OceanDiv = styled.div<OceanDivType>`
+  transform: translateY(-30vh);
+  background-color: black;
+  animation: roll ${(props) => `${props.time}ms`} infinite ease-in-out;
+  transform: rotate(135deg);
+  left: ${(prop) => `${prop.left}vw`};
+  transform: scale(50%);
+  border-radius: 69% 31% 100% 0% / 100% 32% 68% 0% ;
+  @keyframes roll {
+    from {
+      filter: opacity(10px);
+      transform: scale(50%) translateY(-30vh) rotate(135deg);
+    }
+    to {
+      filter: opacity(0);
+      transform: scale(50%) translateY(140vh) rotate(135deg);
+    }
+  }
+`;
+
+export const Test = styled.h1`
+  color: white;
+  text-shadow: 0px 0px 10px white;
+  z-index: 11;
+`;
