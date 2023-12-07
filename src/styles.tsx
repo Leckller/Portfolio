@@ -40,7 +40,7 @@ export const OceanDiv = styled.div<OceanDivType>`
   @keyframes roll {
     from {
       filter: opacity(10px);
-      transform: scale(50%) translateY(-30vw) rotate(135deg);
+      transform: scale(50%) translateY(-150vh) rotate(135deg);
     }
     to {
       filter: opacity(0);
@@ -50,7 +50,6 @@ export const OceanDiv = styled.div<OceanDivType>`
 `;
 
 export const Test = styled.h1`
-  color: white;
-  text-shadow: 0px 0px 10px white;
+  text-shadow: 0px 0px 15px white;
   z-index: 11;
 `;

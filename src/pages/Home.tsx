@@ -25,7 +25,7 @@ function Home() {
       <section className="w-full h-screen flex items-start justify-center">
         <article className="flex flex-col items-center gap-10 z-20 overflow-hidden">
 
-          <h1 className="text-5xl">{`${text.slice(0, writeT1)}${writeT1 >= text.length ? '' : '|'}`}</h1>
+          <Test className="text-5xl h-20">{`${text.slice(0, writeT1)}${writeT1 >= text.length ? '' : '|'}`}</Test>
           <h2>{writeT1 >= text.length ? `${text2.slice(0, writeT2)}${writeT2 >= text2.length ? '' : '|'}` : ''}</h2>
 
           {writeT2 >= text2.length ? (
@@ -54,12 +54,6 @@ function Home() {
           ) : (
             ''
           )}
-
-        </article>
-        <article className="flex flex-col items-center gap-10 absolute">
-
-          <Test className="text-5xl">{`${text.slice(0, writeT1)}${writeT1 >= text.length ? '' : '|'}`}</Test>
-          <Test>{writeT1 >= text.length ? `${text2.slice(0, writeT2)}${writeT2 >= text2.length ? '' : '|'}` : ''}</Test>
 
         </article>
 

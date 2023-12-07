@@ -11,6 +11,7 @@ function App() {
       padding: 0;
       box-sizing: 0;
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
   `;
   return (
