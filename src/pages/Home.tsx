@@ -4,20 +4,18 @@
 import { FaLongArrowAltDown } from 'react-icons/fa';
 import useWriteText from '../hooks/useWriteText';
 import { ANC, LabelAnc, OceanDiv, Test } from '../styles';
+import Gotinhas from '../utils/Gotinhas';
 
 function Home() {
   const text = 'Olá, me chamo Ruy ;D';
   const text2 = 'Sou um desenvolvedor web apaixonado por transformar ideias criativas em experiências digitais incríveis.';
   const writeT1 = useWriteText(text, 40);
   const writeT2 = useWriteText(text2, 20, writeT1 >= text.length);
-  const gotas = [{ left: '0', time: 3500 }, { left: '10', time: 2000 }, { left: '20', time: 2500 }, { left: '30', time: 3200 },
-    { left: '40', time: 3500 }, { left: '50', time: 3000 }, { left: '60', time: 2500 }, { left: '70', time: 2300 },
-    { left: '80', time: 3460 }, { left: '90', time: 2500 }];
   return (
     <main className="w-screen flex overflow-y-scroll flex-col items-center">
-      {writeT2 >= text2.length && gotas.map((({ left, time }, i) => (
+      {writeT2 >= text2.length && Gotinhas(30).map((({ left, time, id }) => (
         <OceanDiv
-          key={ i }
+          key={ id }
           left={ left }
           time={ time }
           className="bg-red-400 w-32 h-32 absolute left-0"
