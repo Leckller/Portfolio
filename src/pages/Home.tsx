@@ -16,6 +16,7 @@ function Home() {
   const writeT2 = useWriteText(text2, 20, writeT1 >= text.length);
   const [btnTop, setBtnTop] = useState(false);
   // useEffect(() => {
+  //   console.log('1');
   //   const Observer = new IntersectionObserver((i) => {
   //     if (i.some((im) => im.isIntersecting)) {
   //       setBtnTop(true);
