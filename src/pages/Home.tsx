@@ -2,15 +2,21 @@
 /* eslint-disable react/jsx-max-depth */
 /* eslint-disable max-len */
 import { FaLongArrowAltDown } from 'react-icons/fa';
+import { useEffect } from 'react';
 import useWriteText from '../hooks/useWriteText';
 import { ANC, LabelAnc, OceanDiv, Test } from '../styles';
 import Gotinhas from '../utils/Gotinhas';
+import Details from '../components/Home/Details';
+import waves from '../assets/Wave.svg';
 
 function Home() {
   const text = 'Olá, me chamo Ruy ;D';
   const text2 = 'Sou um desenvolvedor web apaixonado por transformar ideias criativas em experiências digitais incríveis.';
   const writeT1 = useWriteText(text, 40);
   const writeT2 = useWriteText(text2, 20, writeT1 >= text.length);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main className="w-screen flex overflow-y-scroll flex-col items-center">
       {writeT2 >= text2.length && Gotinhas(window.innerWidth >= 550 ? 30 : 10).map((({ left, time, id }) => (
@@ -23,7 +29,7 @@ function Home() {
       )))}
 
       <section className="w-full h-screen flex items-start justify-center">
-        <article className="flex flex-col items-center gap-10 z-20 overflow-hidden">
+        <article className="flex flex-col items-center gap-10 p-2 z-20 overflow-hidden text-center">
 
           <Test className="text-5xl h-20">{`${text.slice(0, writeT1)}${writeT1 >= text.length ? '' : '|'}`}</Test>
           <h2>{writeT1 >= text.length ? `${text2.slice(0, writeT2)}${writeT2 >= text2.length ? '' : '|'}` : ''}</h2>
@@ -58,11 +64,9 @@ function Home() {
         </article>
 
       </section>
-      <section className="flex h-screen w-screen">
-        <div id="details">
-          a
-        </div>
-      </section>
+      <img src={ waves } alt="waves" className="w-screen" />
+
+      <Details />
     </main>
   );
 }

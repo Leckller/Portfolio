@@ -9,7 +9,7 @@ function Header() {
       <nav>
         <NavLink
           to={ pathname === '/projetos' ? '/' : '/projetos' }
-          className="gap-5 items-center text-xl flex flex-row w-56"
+          className="gap-5 items-center text-xl flex overflow-hidden flex-row w-56"
         >
           <h2
             className="hover:scale-110 transition-all w-32 text-center "

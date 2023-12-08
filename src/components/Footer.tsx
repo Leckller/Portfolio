@@ -1,9 +1,7 @@
-import React from 'react';
-
 function Footer() {
   return (
-    <div>
-      f
+    <div className="bg-gray-800 text-center text-white">
+      Created by Ruy
     </div>
   );
 }

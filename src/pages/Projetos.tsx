@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import ghibli from '../assets/ghibliAnimations.png';
 import Card from '../components/Projetos/Card';
 
