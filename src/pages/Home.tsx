@@ -13,7 +13,7 @@ function Home() {
   const writeT2 = useWriteText(text2, 20, writeT1 >= text.length);
   return (
     <main className="w-screen flex overflow-y-scroll flex-col items-center">
-      {writeT2 >= text2.length && Gotinhas(30).map((({ left, time, id }) => (
+      {writeT2 >= text2.length && Gotinhas(window.innerWidth >= 550 ? 30 : 10).map((({ left, time, id }) => (
         <OceanDiv
           key={ id }
           left={ left }

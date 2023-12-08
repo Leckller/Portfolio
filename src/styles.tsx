@@ -51,5 +51,19 @@ export const OceanDiv = styled.div<OceanDivType>`
 
 export const Test = styled.h1`
   text-shadow: 0px 0px 15px white;
+  height: 100px;
   z-index: 11;
+`;
+
+export const CardStyle = styled.article`
+  animation: aparecer 1700ms ease-out;
+  
+  @keyframes aparecer {
+    from{
+      filter: opacity(0)
+    }
+    to{
+      filter: opacity(100)
+    }
+  }
 `;
