@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable react/jsx-max-depth */
 /* eslint-disable max-len */
-import { FaLongArrowAltDown } from 'react-icons/fa';
-import { useEffect } from 'react';
+import { FaLongArrowAltDown, FaLongArrowAltUp } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
 import useWriteText from '../hooks/useWriteText';
 import { ANC, LabelAnc, OceanDiv, Test } from '../styles';
 import Gotinhas from '../utils/Gotinhas';
@@ -14,9 +14,17 @@ function Home() {
   const text2 = 'Sou um desenvolvedor web apaixonado por transformar ideias criativas em experiências digitais incríveis.';
   const writeT1 = useWriteText(text, 40);
   const writeT2 = useWriteText(text2, 20, writeT1 >= text.length);
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const [btnTop, setBtnTop] = useState(false);
+  // useEffect(() => {
+  //   const Observer = new IntersectionObserver((i) => {
+  //     if (i.some((im) => im.isIntersecting)) {
+  //       setBtnTop(true);
+  //     } else {
+  //       setBtnTop(false);
+  //     }
+  //   });
+  //   Observer.observe(document.querySelector('#details') as Element);
+  // }, []);
   return (
     <main className="w-screen flex overflow-y-scroll flex-col items-center">
       {writeT2 >= text2.length && Gotinhas(window.innerWidth >= 550 ? 30 : 10).map((({ left, time, id }) => (
@@ -67,6 +75,17 @@ function Home() {
       <img src={ waves } alt="waves" className="w-screen" />
 
       <Details />
+      {btnTop ? (
+        <ANC
+          href="#header"
+          className="fixed bottom-16 right-10
+           text-white w-14 h-14 rounded-full border
+             flex items-center justify-center
+           "
+        >
+          <FaLongArrowAltUp />
+        </ANC>
+      ) : ('')}
     </main>
   );
 }
