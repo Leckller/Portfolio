@@ -6,7 +6,7 @@ import { OceanDiv, MainText } from '../styles';
 import Gotinhas from '../utils/Gotinhas';
 import Details from '../components/Home/Details';
 import waves from '../assets/Wave.svg';
-import DetailsButtons from '../components/Home/DetailsButtons';
+// import DetailsButtons from '../components/Home/DetailsButtons';
 
 function Home() {
   const text = 'Olá, me chamo Ruy.';
@@ -24,7 +24,7 @@ function Home() {
         />
       )))}
 
-      <section className="w-full pl-3 h-full flex flex-row items-start">
+      <section className="w-full min-h-screen pl-3 h-full flex flex-row items-start">
 
         <article className="flex flex-col items-start text-start z-20 overflow-y-hidden w-full">
           <MainText className="text-5xl">{`${text.slice(0, writeT1)}${writeT1 >= text.length ? '' : '|'}`}</MainText>
@@ -33,7 +33,7 @@ function Home() {
           {writeT2 >= text2.length && (
             <>
               <Details detail />
-              <DetailsButtons />
+              {/* <DetailsButtons /> */}
             </>
           )}
         </article>

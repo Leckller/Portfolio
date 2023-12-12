@@ -1,6 +1,10 @@
 import { useState } from 'react';
 
-function useWriteText(userText: string, timer: number = 100, go: boolean = true) {
+function useWriteText(
+  userText: any,
+  timer: number = 100,
+  go: boolean = true,
+) {
   const [writeText, setWriteText] = useState(0);
   const text = userText;
   if (writeText < text.length) {

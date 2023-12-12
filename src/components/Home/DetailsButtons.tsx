@@ -53,30 +53,6 @@ function DetailsButtons() {
           <FaLongArrowAltLeft />
         </ButtonDetails>
       </div>
-
-      <LabelAnc
-        htmlFor="more"
-        className="flex flex-col
-              w-screen h-1/4 justify-center
-              items-center gap-2 pb-10"
-      >
-        <div className="text-center text-black">
-          <h3>
-            Ficou interessado?
-          </h3>
-          <h3>
-            clique aqui para ver meus projetos
-          </h3>
-        </div>
-        <ANC
-          href="#details"
-          className="w-10 h-10 rounded-full border border-black flex items-center
-                justify-center text-black"
-        >
-          <FaLongArrowAltDown />
-        </ANC>
-      </LabelAnc>
-
     </DivButtonDetails>
   );
 }
