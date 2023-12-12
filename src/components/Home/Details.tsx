@@ -1,24 +1,47 @@
+import { projetos } from '../../utils/projetos';
 import { tecnologias } from '../../utils/tecnologias';
+import Card from '../Projetos/Card';
 import CardDetails from './CardDetails';
 
-function Details() {
+function Details({ detail = false }: { detail?: boolean }) {
   return (
     <section
-      id="details"
-      className="flex h-screen flex-col w-screen
-    items-center justify-around p-5 bg-black text-white
-    "
+      id={ detail ? '' : 'details' }
+      className={ `overflow-hidden flex h-full flex-col ${detail ? 'w-full' : 'w-screen'}
+      items-start justify-around mt-5 gap-5 ${detail ? '' : 'bg-black'} 
+      ${detail ? 'text-black' : 'text-white'} text-xl font-medium` }
     >
-      <h1 className="p-5 overflow-hidden">Tecnologias</h1>
-      <div
-        className="flex flex-row flex-wrap w-full h-full
-         items-center justify-around
 
+      <h1 className=" overflow-hidden">
+        {detail ? 'Especializado nas Linguagens'
+          : 'Projetos'}
+
+      </h1>
+      <div
+        className="flex flex-row flex-wrap w-full
+        items-center justify-around
         "
       >
-        {tecnologias && tecnologias.map((tec) => (
-          <CardDetails img={ tec.img } title={ tec.title } key={ tec.title } />
-        ))}
+        {detail ? (
+          tecnologias && tecnologias.map((tec) => (
+            <CardDetails
+              img={ tec.img }
+              title={ tec.title }
+              key={ tec.title }
+            />
+          ))
+
+        ) : (
+
+          projetos && projetos.map((proj) => (
+            <Card
+              url={ proj.url }
+              image={ proj.img }
+              title={ proj.title }
+              key={ proj.title }
+            />
+          ))
+        )}
 
       </div>
 

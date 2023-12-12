@@ -18,6 +18,15 @@ from {
     }  
 `;
 
+const quicSide = keyframes`
+from {
+      transform: translateX(-10px);
+    }
+    to {
+      transform: translateX(10px);
+    }  
+`;
+
 const roll = keyframes`
       from {
       filter: opacity(10px);
@@ -33,8 +42,15 @@ export const ANC = styled.a`
   animation: ${quiq} 1000ms ease-in-out infinite alternate;
 `;
 
-export const LabelAnc = styled.label`
+export const DivButtonDetails = styled.div`
   animation: ${aparecer} 1000ms ease-in-out;
+`;
+
+export const ButtonDetails = styled.button`
+  animation: ${quicSide} 1000ms ease-in-out infinite alternate;
+`;
+
+export const LabelAnc = styled.label`
 `;
 
 type OceanDivType = {
@@ -52,7 +68,7 @@ export const OceanDiv = styled.div<OceanDivType>`
   border-radius: 69% 31% 100% 0% / 100% 32% 68% 0% ;
 `;
 
-export const Test = styled.h1`
+export const MainText = styled.h1`
   text-shadow: 0px 0px 15px white;
   height: 100px;
   z-index: 11;
@@ -60,5 +76,4 @@ export const Test = styled.h1`
 
 export const CardStyle = styled.article`
   animation: ${aparecer} 1700ms ease-out;
-  
 `;
