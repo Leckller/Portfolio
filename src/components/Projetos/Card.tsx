@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { CardStyle } from '../../styles';
 
-function Card({ image, url, title }) {
+function Card({ image, url, title }: { title: string, url: string, image: string }) {
   return (
     <Link
       to={ url }

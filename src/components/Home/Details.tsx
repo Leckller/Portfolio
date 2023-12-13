@@ -25,7 +25,7 @@ function Details({ detail = false }: { detail?: boolean }) {
       {write >= title.length ? (
         <div
           className="flex flex-row flex-wrap md:w-1/2
-        items-center justify-around gap-1
+        items-center justify-around gap-1 mb-16 md:border-r-2
         "
         >
           {detail ? (
@@ -53,11 +53,11 @@ function Details({ detail = false }: { detail?: boolean }) {
       ) : (
         <div />
       )}
-      {write >= title.length && (
+      {writeimages >= tecnologias.length && (
         <LabelAnc
           htmlFor="more"
           className="flex flex-col
-              w-screen h-1/4 justify-center
+              w-full h-1/4 justify-center
               items-center gap-2 pb-10"
         >
           <div className="text-center text-black">

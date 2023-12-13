@@ -27,6 +27,17 @@ from {
     }  
 `;
 
+const detailsAnimation = keyframes`
+    from {
+      filter: opacity(0);
+      transform: translateX(150vw)
+    }
+    to {
+      filter: opacity(100);
+      transform: translateX(0);
+    }  
+`;
+
 const roll = keyframes`
       from {
       filter: opacity(10px);
@@ -44,6 +55,10 @@ export const ANC = styled.a`
 
 export const DivButtonDetails = styled.div`
   animation: ${aparecer} 1000ms ease-in-out;
+`;
+
+export const CardDetailsAnimation = styled.div`
+  animation: ${detailsAnimation} 1000ms ease-in-out;
 `;
 
 export const ButtonDetails = styled.button`
