@@ -1,42 +1,79 @@
 import styled, { keyframes } from 'styled-components';
 
-const rotate = keyframes`
+const aparecer = keyframes`
   from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+      filter: opacity(0);
+    }
+    to {
+      filter: opacity(100)
+    }  
 `;
 
-export const Logo = styled.img`
-height: 6em;
-padding: 1.5em;
-will-change: filter;
-transition: filter 300ms;
-&:hover{
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
+const quiq = keyframes`
+from {
+      transform: translateY(-10px);
+    }
+    to {
+      transform: translateY(10px);
+    }  
 `;
 
-export const React = styled(Logo)`
-&:hover{
-  filter: drop-shadow(0 0 2em #61dafbaa);
-  animation: ${rotate} 3s linear infinite;
-}
+const quicSide = keyframes`
+from {
+      transform: translateX(-10px);
+    }
+    to {
+      transform: translateX(10px);
+    }  
 `;
 
-export const Trybe = styled(Logo)`
-&:hover{
-  filter: drop-shadow(0 0 2em #78d691aa);
-  animation: ${rotate} 3s linear infinite;
-}
+const roll = keyframes`
+      from {
+      filter: opacity(10px);
+      transform: scale(50%) translateY(-150vh) rotate(135deg);
+    }
+    to {
+      filter: opacity(0);
+      transform: scale(50%) translateY(140vh) rotate(135deg);
+    }
 `;
 
-export const Card = styled.div`
-padding: 2em;
+export const ANC = styled.a`
+  animation: ${quiq} 1000ms ease-in-out infinite alternate;
 `;
 
-export const Docs = styled.p`
-color: #888;
+export const DivButtonDetails = styled.div`
+  animation: ${aparecer} 1000ms ease-in-out;
+`;
+
+export const ButtonDetails = styled.button`
+  animation: ${quicSide} 1000ms ease-in-out infinite alternate;
+`;
+
+export const LabelAnc = styled.label`
+`;
+
+type OceanDivType = {
+  left: number;
+  time: number;
+};
+
+export const OceanDiv = styled.div<OceanDivType>`
+  transform: translateY(-30vh);
+  background-color: black;
+  animation: ${roll} ${(props) => `${props.time}ms`} infinite ease-in-out;
+  transform: rotate(135deg);
+  left: ${(prop) => `${prop.left}vw`};
+  transform: scale(50%);
+  border-radius: 69% 31% 100% 0% / 100% 32% 68% 0% ;
+`;
+
+export const MainText = styled.h1`
+  text-shadow: 0px 0px 15px white;
+  height: 100px;
+  z-index: 11;
+`;
+
+export const CardStyle = styled.article`
+  animation: ${aparecer} 1700ms ease-out;
 `;
