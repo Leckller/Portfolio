@@ -15,7 +15,7 @@ function Home() {
   const writeT2 = useWriteText(text2, 20, writeT1 >= text.length);
   return (
     <main className="w-screen flex overflow-y-scroll flex-col items-start">
-      {writeT2 >= text2.length && Gotinhas(window.innerWidth >= 550 ? 30 : 10).map((({ left, time, id }) => (
+      {writeT2 >= text2.length && Gotinhas(window.innerWidth >= 550 ? 20 : 10).map((({ left, time, id }) => (
         <OceanDiv
           key={ id }
           left={ left }
@@ -24,7 +24,7 @@ function Home() {
         />
       )))}
 
-      <section className="w-full min-h-screen pl-3 h-full flex flex-row items-start">
+      <section className="w-full min-h-screen pl-3 pr-3 h-full flex flex-row items-start">
 
         <article className="flex flex-col items-start text-start z-20 overflow-y-hidden w-full">
           <MainText className="text-5xl">{`${text.slice(0, writeT1)}${writeT1 >= text.length ? '' : '|'}`}</MainText>
@@ -42,7 +42,7 @@ function Home() {
       <img
         src={ waves }
         alt="waves"
-        className="w-screen translate-y-5"
+        className="w-screen translate-y-6"
       />
       <Details />
     </main>
