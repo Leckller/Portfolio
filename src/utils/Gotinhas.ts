@@ -8,7 +8,7 @@ function Gotinhas(numGotas: number = 10) {
         time: Math.floor(Math.random() * 4000 + 2000),
         id: i });
     } else {
-      const randomLeft = Math.floor(Math.random() * 100);
+      const randomLeft = Math.floor(Math.random() * 95);
       const randomTime = Math.floor(Math.random() * 10000 + 2000);
       gotas.push({ left: randomLeft + 5, time: randomTime, id: i });
     }

@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div className="bg-gray-800 text-center text-white">
+    <div className="bg-gray-800 w-full text-center text-white">
       Created by Ruy
     </div>
   );

@@ -1,11 +1,13 @@
 /* eslint-disable complexity */
 /* eslint-disable react/jsx-max-depth */
-import { tecnologias } from '../../utils/tecnologias';
+import { useContext } from 'react';
 import DetailsCursos from './DetailsCursos';
 import DetailsTecnologias from './DetailsTecnologias';
 import DetailsAnc from './DetailsAnc';
+import AppContext from '../../Context/AppContext';
 
 function Details({ detail = false }: { detail?: boolean }) {
+  const { endFirstDetail } = useContext(AppContext);
   return (
     <section
       id={ detail ? '' : 'details' }
@@ -14,12 +16,12 @@ function Details({ detail = false }: { detail?: boolean }) {
       ${detail ? 'text-black' : 'text-white'} text-xl font-medium` }
     >
 
-      <div className="flex-row flex w-full">
+      <div className="md:flex-row flex-col flex w-full">
         <DetailsTecnologias detail={ detail } />
-        {detail && <DetailsCursos />}
+        {(endFirstDetail && detail) && <DetailsCursos />}
       </div>
 
-      {tecnologias.length <= 100 && (
+      {endFirstDetail && (
         <DetailsAnc />
       )}
     </section>
