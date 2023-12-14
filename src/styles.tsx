@@ -49,6 +49,25 @@ const roll = keyframes`
     }
 `;
 
+const quicDownRight = keyframes`
+from {
+      transform: translateX(-10px);
+      transform: translateY(-10px);
+    }
+    to {
+      transform: translateY(10px);
+      transform: translateX(10px);
+    } 
+`;
+
+type ArrowDownType = {
+  detail: boolean
+};
+export const ArrowDown = styled.div<ArrowDownType>`
+  animation: ${(prop) => (prop.detail ? quiq : quicDownRight)}
+   1000ms ease-in-out infinite alternate;
+`;
+
 export const ANC = styled.a`
   animation: ${quiq} 1000ms ease-in-out infinite alternate;
 `;
