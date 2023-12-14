@@ -9,7 +9,7 @@ import CardDetails from './CardDetails';
 import AppContext from '../../Context/AppContext';
 
 function DetailsTecnologias({ detail }: { detail: boolean }) {
-  const title = detail ? 'Especializado nas Tecnologias' : 'Projetos';
+  const title = detail ? 'Tenho Conhecimento nas Tecnologias' : 'Projetos';
   const write = useWriteText(title, 40);
   const writeimages = useWriteText(tecnologias, 300);
   const { toggleEndF } = useContext(AppContext);
@@ -17,7 +17,7 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
     <div className="flex flex-col md:w-1/2">
       <h1
         className={ `overflow-hidden h-16 justify-start
-        relative w-96 flex flex-row items-center gap-5
+        relative w-full flex flex-row items-center gap-5
         ${detail ? '' : 'pl-5'}` }
       >
         {`${title.slice(0, write)} ${write >= title.length ? '' : '|'}`}

@@ -5,7 +5,7 @@ import useWriteText from '../../hooks/useWriteText';
 function DetailsCursos() {
   const textos = {
     text: 'Cursos',
-    text2: 'Desenvolvimento Web FullStack na',
+    text2: 'Cursando Desenvolvimento Web FullStack na',
     text3: 'Cursando Engenharia de Software na',
     text4: 'Em constante aprendizado com novas tecnologias como',
   };
@@ -14,10 +14,10 @@ function DetailsCursos() {
   const t3 = useWriteText(textos.text3, 40);
   const t4 = useWriteText(textos.text4, 40);
   return (
-    <div className="flex flex-col w-full md:w-1/2 ">
+    <div className="flex flex-col w-full pl-5 md:w-1/2 ">
       <h1
         className="w-96 overflow-hidden h-16 justify-start relative
-    flex flex-row items-center gap-5"
+    flex flex-row items-center gap-5 pt-2"
       >
         {`${textos.text.slice(0, t1)} ${t1 >= textos.text.length ? '' : '|'}`}
         {t1 >= textos.text.length && (
@@ -26,7 +26,7 @@ function DetailsCursos() {
           </ArrowDown>
         )}
       </h1>
-      <div className="p-5">
+      <div className="">
         <h2>
           {`${textos.text2.slice(0, t2)} ${t2 >= textos.text2.length ? '' : '|'}`}
           {' '}

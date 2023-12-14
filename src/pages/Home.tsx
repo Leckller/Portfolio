@@ -10,7 +10,7 @@ import waves from '../assets/Wave.svg';
 
 function Home() {
   const text = 'Olá, me chamo Ruy.';
-  const text2 = 'Sou um desenvolvedor Full Stack apaixonado por transformar ideias criativas em experiências digitais incríveis.';
+  const text2 = 'Sou um desenvolvedor Full Stack apaixonado por transformar ideias criativas em experiências digitais incríveis!';
   const writeT1 = useWriteText(text, 40);
   const writeT2 = useWriteText(text2, 20, writeT1 >= text.length);
   return (
