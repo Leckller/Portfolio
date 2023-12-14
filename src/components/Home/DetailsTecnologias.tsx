@@ -36,7 +36,7 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
 
           {detail ? (
             <div
-              className="flex flex-col overflow-x-auto w-full
+              className="flex flex-col overflow-x-auto w-full gap-1
               justify-around flex-wrap h-96 md:overflow-x-hidden md:flex-row md:h-full"
             >
               {tecnologias && tecnologias.slice(0, writeimages).map((tec) => {

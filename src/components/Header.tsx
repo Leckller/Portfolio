@@ -10,7 +10,7 @@ function Header() {
         <div className="flex flex-row gap-5">
           <NavLink
             to={ pathname === '/contact' ? '/' : '/contact' }
-            className="text-2xl flex overflow-hidden flex-row"
+            className="text-2xl font-bold flex overflow-hidden flex-row"
           >
             <h2
               className="hover:scale-110 transition-all w-32 text-center "
