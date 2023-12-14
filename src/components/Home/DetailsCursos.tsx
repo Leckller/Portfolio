@@ -1,6 +1,6 @@
 function DetailsCursos() {
   return (
-    <div className="flex flex-col w-1/2 ">
+    <div className="flex flex-col w-full md:w-1/2 ">
       <h1
         className="w-96 overflow-hidden h-16 justify-start relative
     flex flex-row items-center gap-5"

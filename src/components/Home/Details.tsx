@@ -14,7 +14,7 @@ function Details({ detail = false }: { detail?: boolean }) {
       ${detail ? 'text-black' : 'text-white'} text-xl font-medium` }
     >
 
-      <div className="flex-row flex w-full">
+      <div className="md:flex-row flex-col flex w-full">
         <DetailsTecnologias detail={ detail } />
         {detail && <DetailsCursos />}
       </div>

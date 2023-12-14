@@ -11,7 +11,7 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
   const write = useWriteText(title, 20);
   const writeimages = useWriteText(tecnologias, 300);
   return (
-    <div className="flex flex-col w-1/2">
+    <div className="flex flex-col md:w-1/2">
       <h1
         className={ `overflow-hidden h-16 justify-start
   relative w-96 flex flex-row items-center gap-5
@@ -30,15 +30,20 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
     items-center justify-around gap-1 mb-16 
     ${detail ? 'md:border-r-2' : 'overflow-y-hidden w-full'}` }
         >
-          {detail ? (
-            tecnologias && tecnologias.slice(0, writeimages).map((tec) => (
-              <CardDetails
-                img={ tec.img }
-                title={ tec.title }
-                key={ tec.title }
-              />
-            ))
 
+          {detail ? (
+            <div
+              className="flex flex-col overflow-x-auto w-full
+             justify-around flex-wrap h-96 md:flex-row md:h-full"
+            >
+              {tecnologias && tecnologias.slice(0, writeimages).map((tec) => (
+                <CardDetails
+                  img={ tec.img }
+                  title={ tec.title }
+                  key={ tec.title }
+                />
+              ))}
+            </div>
           ) : (
 
             projetos && projetos.map((proj) => (
