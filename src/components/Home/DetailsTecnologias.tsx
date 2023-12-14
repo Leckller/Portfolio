@@ -8,7 +8,7 @@ import CardDetails from './CardDetails';
 
 function DetailsTecnologias({ detail }: { detail: boolean }) {
   const title = detail ? 'Especializado nas Tecnologias' : 'Projetos';
-  const write = useWriteText(title, 20);
+  const write = useWriteText(title, 40);
   const writeimages = useWriteText(tecnologias, 300);
   return (
     <div className="flex flex-col md:w-1/2">
@@ -34,7 +34,7 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
           {detail ? (
             <div
               className="flex flex-col overflow-x-auto w-full
-             justify-around flex-wrap h-96 md:flex-row md:h-full"
+             justify-around flex-wrap h-96 md:overflow-x-hidden md:flex-row md:h-full"
             >
               {tecnologias && tecnologias.slice(0, writeimages).map((tec) => (
                 <CardDetails
