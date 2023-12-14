@@ -9,10 +9,10 @@ function DetailsCursos() {
     text3: 'Cursando Engenharia de Software na',
     text4: 'Em constante aprendizado com novas tecnologias como',
   };
-  const t1 = useWriteText(textos.text, 40);
-  const t2 = useWriteText(textos.text2, 40);
-  const t3 = useWriteText(textos.text3, 40);
-  const t4 = useWriteText(textos.text4, 40);
+  const t1 = useWriteText(textos.text, 20);
+  const t2 = useWriteText(textos.text2, 20);
+  const t3 = useWriteText(textos.text3, 20);
+  const t4 = useWriteText(textos.text4, 20);
   return (
     <div className="flex flex-col w-full pl-5 md:w-1/2 ">
       <h1
