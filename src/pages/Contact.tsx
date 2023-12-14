@@ -6,6 +6,7 @@ function Contact() {
     <main className="h-screen w-screen flex flex-row items-start">
       <nav className="p-5 flex flex-col gap-5 w-full items-center">
         <NavLink
+          target="_blank"
           to="https://github.com/Leckller"
           className="text-4xl flex flex-row items-center"
         >
@@ -13,6 +14,7 @@ function Contact() {
           <FaGithubSquare />
         </NavLink>
         <NavLink
+          target="_blank"
           to="https://www.linkedin.com/in/gusttavoruy/"
           className="text-4xl flex flex-row items-center"
         >
