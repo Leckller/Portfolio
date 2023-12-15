@@ -14,7 +14,7 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
   const writeimages = useWriteText(tecnologias, 300);
   const { toggleEndF } = useContext(AppContext);
   return (
-    <div className="flex flex-col md:w-1/2">
+    <div className="flex flex-col md:w-full">
       <h1
         className={ `overflow-hidden h-16 justify-start
         relative w-full flex flex-row items-center gap-5
