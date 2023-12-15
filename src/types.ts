@@ -11,4 +11,5 @@ export type ProjetosType = {
   describe: string,
   tecnologias: string[],
   url: string,
+  gitHub: string,
 };
