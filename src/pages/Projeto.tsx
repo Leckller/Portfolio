@@ -5,7 +5,6 @@ import { projetos } from '../utils/projetos';
 function Projeto() {
   const { name } = useParams();
   const project = projetos.find((proj) => proj.title === name);
-  console.log(project);
   return (
     <main
       className="h-screen w-screen flex flex-col flex-nowrap p-5 gap-5
@@ -18,8 +17,19 @@ function Projeto() {
           alt={ project?.title }
         />
       </Link>
-      <div className="w-full h-full text-center md:text-start">
-        <h1 className="text-4xl h-16">{project?.title}</h1>
+      <div className="w-full h-full text-center md:text-start flex flex-col gap-5">
+        <h1 className="text-4xl">{project?.title}</h1>
+
+        <div className="flex flex-col gap-5">
+          <div className="flex flex-row items-center relative justify-center">
+            <h2>Sobre o projeto</h2>
+            <FaArrowAltCircleDown className="animate-bounce ml-10" />
+          </div>
+          <p className="min-h-[100px]">
+            {project?.describe}
+          </p>
+
+        </div>
 
         <div className="flex flex-col gap-5">
           <div className="flex flex-row items-center relative justify-center">
@@ -42,11 +52,6 @@ function Projeto() {
           </div>
         </div>
 
-        <div>
-
-          {/* <p>{project?.describe}</p> */}
-
-        </div>
       </div>
     </main>
   );

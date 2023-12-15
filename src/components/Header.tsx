@@ -8,6 +8,17 @@ function Header() {
       <img src="" alt="R" />
       <nav className="flex flex-row items-center">
         <div className="flex flex-row gap-5">
+          {pathname.includes('project') && (
+            <NavLink
+              to="/"
+              className="text-2xl font-bold flex overflow-hidden flex-row"
+            >
+              <h2 className="hover:scale-110 transition-all w-32 text-center ">
+                Home
+              </h2>
+            </NavLink>
+          )}
+
           <NavLink
             to={ pathname === '/contact' ? '/' : '/contact' }
             className="text-2xl font-bold flex overflow-hidden flex-row"
