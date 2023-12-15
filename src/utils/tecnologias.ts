@@ -1,3 +1,5 @@
+import octopus from '../assets/octopus-64x64.png';
+
 export const tecnologias = [{ title: 'CSS', img: 'https://img.icons8.com/plasticine/100/css3.png' },
   { title: 'Git', img: 'https://img.icons8.com/color/96/git.png' },
   { title: 'Node-js', img: 'https://img.icons8.com/fluency/96/node-js.png' },
@@ -12,4 +14,5 @@ export const tecnologias = [{ title: 'CSS', img: 'https://img.icons8.com/plastic
   { title: 'HTML', img: 'https://img.icons8.com/color/96/html-5--v1.png' },
   { title: 'Vite', img: 'https://img.icons8.com/color/96/vite.png' },
   { title: 'Firebase', img: 'https://img.icons8.com/color/96/firebase.png' },
+  { title: 'RTL', img: octopus },
 ];

@@ -4,6 +4,14 @@ import jogoDaVeia from '../assets/jogoDaVeia.png';
 import ruyTunes from '../assets/ruyTUnes.png';
 import recipesApp from '../assets/logoPintada2.png';
 import dede from '../assets/dedeprint.png';
+import gravidade from '../assets/gravidadeImage.png';
+import brejaImg from '../assets/brejaImage.png';
+import ghibliImage from '../assets/totoro_08.jpg';
+import chinelinImage from '../assets/chinelinImage.png';
+import pixelsArtImage from '../assets/pixelsArtImage.png';
+import colorGuessImage from '../assets/colorGuessImage.png';
+import anyImage from '../assets/blackImage.jpeg';
+
 import { ProjetosType } from '../types';
 
 export const projetos:ProjetosType[] = [
@@ -28,49 +36,56 @@ export const projetos:ProjetosType[] = [
     isFinish: true,
     tecnologias: ['React', 'Redux', 'Redux-thunk', 'Tailwind', 'React-Router-Dom', 'Vite', 'TypeScript'] },
 
-  { image: recipesApp,
+  { image: colorGuessImage,
     title: 'color guess',
     url: 'https://color-guess-xi.vercel.app',
     describe: '',
     isFinish: true,
     tecnologias: ['HTML', 'JavaScript', 'CSS'] },
 
-  { image: recipesApp,
+  { image: pixelsArtImage,
     title: 'Pixels Art',
     url: 'https://pixels-art-orcin.vercel.app',
     describe: '',
     isFinish: true,
     tecnologias: ['HTML', 'JavaScript', 'CSS', 'LocalStorage'] },
 
-  { image: recipesApp,
+  { image: anyImage,
     title: 'RuyTTer 2.0',
     url: 'https://ruytt.vercel.app',
     describe: '',
     isFinish: false,
     tecnologias: ['React', 'Firebase', 'Tailwind', 'Redux', 'React-Router-Dom'] },
 
-  { image: recipesApp,
+  { image: anyImage,
+    title: 'RuyTTer',
+    url: 'https://ruytter-leckller.vercel.app/',
+    describe: '',
+    isFinish: false,
+    tecnologias: ['React', 'Firebase', 'Styled-Components', 'Redux', 'React-Router-Dom'] },
+
+  { image: chinelinImage,
     title: 'Chinelinho',
     url: 'https://chinelinho.vercel.app/',
     describe: '',
     isFinish: false,
     tecnologias: ['HTML', 'CSS', 'JavaScript'] },
 
-  { image: recipesApp,
+  { image: ghibliImage,
     title: 'Ghibli Animations',
     url: 'https://ghibli-animations-nine.vercel.app/',
     describe: '',
     isFinish: true,
     tecnologias: ['React', 'Context Api', 'Styled-Components', 'React-Router_Dom'] },
 
-  { image: recipesApp,
+  { image: brejaImg,
     title: 'Breja',
     url: 'https://breja-two.vercel.app/',
     describe: '',
     isFinish: true,
     tecnologias: ['HTML', 'CSS', 'JavaScript'] },
 
-  { image: recipesApp,
+  { image: gravidade,
     title: 'Teste de Gravidade',
     url: 'https://gravidade-vercel.vercel.app/',
     describe: '',
