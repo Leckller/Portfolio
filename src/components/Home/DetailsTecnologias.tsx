@@ -54,8 +54,7 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
 
             projetos && projetos.map((proj) => (
               <Card
-                url={ proj.url }
-                image={ proj.img }
+                image={ proj.image }
                 title={ proj.title }
                 key={ proj.title }
               />

@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { CardStyle } from '../../styles';
 
-function Card({ image, url, title }: { title: string, url: string, image: string }) {
+function Card({ image, title }: { title: string, image: string }) {
   return (
     <Link
-      to={ url }
+      to={ `/project/${title}` }
       className="overflow-hidden hover:scale-110 transition-all w-72
         border-2 border-black rounded-md h-56
       "
