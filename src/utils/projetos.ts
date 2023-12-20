@@ -15,6 +15,15 @@ import anyImage from '../assets/blackImage.jpeg';
 import { ProjetosType } from '../types';
 
 export const projetos:ProjetosType[] = [
+  { image: anyImage,
+    title: 'ruyMusic',
+    url: 'https://ruy-music.vercel.app',
+    describe: 'Um novo layout para o "ruyTunes" baseado no spotify mobile',
+    isFinish: false,
+    tecnologias: ['React', 'Redux', 'Tailwind', 'React-Router-Dom', 'Vite', 'TypeScript'],
+    gitHub: '',
+  },
+
   { image: jogoDaVeia,
     title: 'Jogo Da Velha',
     url: 'https://jogo-da-veia.vercel.app/',
