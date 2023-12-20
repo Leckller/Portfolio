@@ -23,16 +23,18 @@ function Projeto() {
         <div className="w-full h-full text-center md:text-start flex flex-col gap-5">
           <h1 className="text-4xl h-[50px]">{project?.title}</h1>
 
-          <div className="flex flex-col gap-5">
-            <div className="flex flex-row h-[50px] items-center justify-center">
-              <h2 className="mr-2 ml-2">Sobre o projeto</h2>
-              <FaArrowAltCircleDown className="animate-bounce" />
-            </div>
-            <p className="min-h-[100px]">
-              {project?.describe}
-            </p>
+          {project?.describe !== '' && (
+            <div className="flex flex-col gap-5">
+              <div className="flex flex-row h-[50px] items-center justify-center">
+                <h2 className="mr-2 ml-2">Sobre o projeto</h2>
+                <FaArrowAltCircleDown className="animate-bounce" />
+              </div>
+              <p className="min-h-[100px]">
+                {project?.describe}
+              </p>
 
-          </div>
+            </div>
+          )}
 
           <div className="flex flex-col gap-5">
             <div className="flex flex-row items-center h-[50px] justify-center">
