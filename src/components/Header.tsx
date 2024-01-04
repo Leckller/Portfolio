@@ -1,12 +1,14 @@
 /* eslint-disable react/jsx-max-depth */
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import R from '../assets/R.png';
 
 function Header() {
   const { pathname } = useLocation();
   return (
     <header id="header" className="flex flex-row justify-between p-5">
-      <img src={ R } alt="R" className="w-20" />
+      <Link to="/" className="w-20 scale-125">
+        <img src={ R } alt="R" />
+      </Link>
       <nav className="flex flex-row items-center">
         <div className="flex flex-row gap-5">
           {pathname.includes('project') && (
