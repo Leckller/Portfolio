@@ -5,7 +5,7 @@ import ruyTunes from '../assets/ruyTUnes.png';
 import recipesApp from '../assets/logoPintada2.png';
 import dede from '../assets/dedeprint.png';
 import gravidade from '../assets/gravidadeImage.png';
-import brejaImg from '../assets/brejaImage.png';
+// import brejaImg from '../assets/brejaImage.png';
 import ghibliImage from '../assets/totoro_08.jpg';
 import chinelinImage from '../assets/chinelinImage.png';
 import pixelsArtImage from '../assets/pixelsArtImage.png';
@@ -105,14 +105,14 @@ export const projetos:ProjetosType[] = [
     gitHub: '',
   },
 
-  { image: brejaImg,
-    title: 'Breja',
-    url: 'https://breja-two.vercel.app/',
-    describe: '',
-    isFinish: true,
-    tecnologias: ['HTML', 'CSS', 'JavaScript'],
-    gitHub: '',
-  },
+  // { image: brejaImg,
+  //   title: 'Breja',
+  //   url: 'https://breja-two.vercel.app/',
+  //   describe: '',
+  //   isFinish: true,
+  //   tecnologias: ['HTML', 'CSS', 'JavaScript'],
+  //   gitHub: '',
+  // },
 
   { image: gravidade,
     title: 'Teste de Gravidade',
