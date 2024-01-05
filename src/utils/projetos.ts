@@ -5,6 +5,7 @@ import ruyTunes from '../assets/ruyTUnes.png';
 import recipesApp from '../assets/logoPintada2.png';
 import dede from '../assets/dedeprint.png';
 import gravidade from '../assets/gravidadeImage.png';
+import ruyMusic from '../assets/ruyMusca.jpeg';
 // import brejaImg from '../assets/brejaImage.png';
 import ghibliImage from '../assets/totoro_08.jpg';
 import chinelinImage from '../assets/chinelinImage.png';
@@ -15,7 +16,7 @@ import anyImage from '../assets/blackImage.jpeg';
 import { ProjetosType } from '../types';
 
 export const projetos:ProjetosType[] = [
-  { image: anyImage,
+  { image: ruyMusic,
     title: 'ruyMusic',
     url: 'https://ruy-music.vercel.app',
     describe: 'Um novo layout para o "ruyTunes" baseado no spotify mobile',
