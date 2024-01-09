@@ -12,10 +12,21 @@ import chinelinImage from '../assets/chinelinImage.png';
 import pixelsArtImage from '../assets/pixelsArtImage.png';
 import colorGuessImage from '../assets/colorGuessImage.png';
 import anyImage from '../assets/blackImage.jpeg';
+import R from '../assets/R.png';
 
 import { ProjetosType } from '../types';
 
 export const projetos:ProjetosType[] = [
+
+  { image: R,
+    title: 'ruyTempo',
+    url: 'https://ruy-tempo.vercel.app/',
+    describe: 'Um app de previsão do tempo',
+    isFinish: false,
+    tecnologias: ['React', 'Tailwind', 'Vite', 'TypeScript'],
+    gitHub: '',
+  },
+
   { image: ruyMusic,
     title: 'ruyMusic',
     url: 'https://ruy-music.vercel.app',
