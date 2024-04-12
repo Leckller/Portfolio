@@ -7,6 +7,9 @@ import CardDetails from './CardDetails';
 import AppContext from '../../Context/AppContext';
 import { ProjetosType } from '../../types';
 
+const authorization = import.meta.env.VITE_SECRET;
+const url = import.meta.env.VITE_DATABASE;
+
 function DetailsTecnologias({ detail }: { detail: boolean }) {
   const [projects, setProjects] = useState<ProjetosType[]>([]);
   const [popup, setPopup] = useState<{
@@ -17,11 +20,11 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
 
   useEffect(() => {
     const effect = async () => {
-      const db = await fetch('https://portfolio-backend-production-a195.up.railway.app/', {
+      const db = await fetch(url, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          authorization: 'peloamordedeusmedaumemprego',
+          authorization,
         },
       });
       const resp: { data: ProjetosType[] } = await db.json();
