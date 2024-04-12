@@ -5,9 +5,7 @@ export type GotaType = {
 };
 
 export type ProjetosType = {
-  image: string,
   title: string,
-  isFinish: boolean,
   describe: string,
   tecnologias: string[],
   url: string,

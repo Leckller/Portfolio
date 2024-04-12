@@ -4,7 +4,6 @@ import Home from './pages/Home';
 import './index.css';
 import Layout from './components/Layout';
 import Contact from './pages/Contact';
-import Projeto from './pages/Projeto';
 
 function App() {
   const GlobalStyle = createGlobalStyle`
@@ -20,7 +19,6 @@ function App() {
         <Route element={ <Layout /> }>
           <Route path="/" element={ <Home /> } />
           <Route path="/contact" element={ <Contact /> } />
-          <Route path="/project/:name" element={ <Projeto /> } />
         </Route>
       </Routes>
     </>

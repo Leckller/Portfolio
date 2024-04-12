@@ -26,7 +26,7 @@ function Home() {
 
       <section className="w-full min-h-screen pl-3 pr-3 h-full flex flex-row items-start">
 
-        <article className="flex flex-col items-start text-start z-20 overflow-y-hidden w-full">
+        <article className="flex flex-col items-start text-start overflow-y-hidden w-full">
           <MainText className="text-5xl">{`${text.slice(0, writeT1)}${writeT1 >= text.length ? '' : '|'}`}</MainText>
           <h2 className=" text-2xl">{writeT1 >= text.length ? `${text2.slice(0, writeT2)}${writeT2 >= text2.length ? '' : '|'}` : ''}</h2>
 

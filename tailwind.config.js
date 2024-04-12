@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'grayT': 'rgba(216, 216, 216, 0.2)'
+      },
       keyframes: {
         surgir: {
           '0%': { filter: 'opacity(0%)' },
