@@ -11,7 +11,8 @@ function Details({ detail = false }: { detail?: boolean }) {
   return (
     <section
       id={ detail ? '' : 'details' }
-      className={ `overflow-hidden flex h-full flex-col ${detail ? 'w-full' : 'w-screen'}
+      className={ `
+      overflow-hidden flex h-full flex-col ${detail ? 'w-full' : 'w-screen'}
       items-start justify-around mt-5 gap-5 ${detail ? '' : 'bg-black'} 
       ${detail ? 'text-black' : 'text-white'} text-xl font-medium` }
     >

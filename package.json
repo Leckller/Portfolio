@@ -7,10 +7,13 @@
     "build": "tsc && vite build",
     "dev": "vite --open",
     "lint": "eslint -c .eslintrc.json . --ext .js,.jsx,.ts,.tsx",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "db": "python3 database/server.py"
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "@types/node": "^20.12.7",
+    "dotenv": "^16.4.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",

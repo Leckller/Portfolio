@@ -25,10 +25,10 @@ function Contact() {
         <div>
           <a
             target="_blank"
-            href="gusttavoruy@gmail.com"
+            href="7leckler@gmail.com"
             className="text-3xl flex flex-row items-center"
           >
-            Email para contato: gusttavoruy@gmail.com
+            Email para contato: 7leckler@gmail.com
           </a>
           {/* <button>Copiar</button> */}
         </div>
