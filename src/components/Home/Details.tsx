@@ -22,9 +22,10 @@ function Details({ detail = false }: { detail?: boolean }) {
         {(endFirstDetail && detail) && <DetailsCursos />}
       </div>
 
-      {endFirstDetail && (
+      {(endFirstDetail && detail) && (
         <DetailsAnc />
       )}
+
     </section>
 
   );
