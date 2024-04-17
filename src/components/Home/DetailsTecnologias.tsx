@@ -2,16 +2,17 @@ import { FaArrowAltCircleDown } from 'react-icons/fa';
 import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useWriteText from '../../hooks/useWriteText';
-import { tecnologias } from '../../utils/tecnologias';
 import CardDetails from './CardDetails';
 import AppContext from '../../Context/AppContext';
-import { ProjetosType } from '../../types';
+import { ProjetosType, TecnologiaType } from '../../types';
 
 const authorization = import.meta.env.VITE_SECRET;
-const url = import.meta.env.VITE_DATABASE;
+const urlProjs = import.meta.env.VITE_PROJS;
+const urlTecs = import.meta.env.VITE_TECS;
 
 function DetailsTecnologias({ detail }: { detail: boolean }) {
   const [projects, setProjects] = useState<ProjetosType[]>([]);
+  const [tecnologias, setTecnologias] = useState<TecnologiaType[]>([]);
   const [popup, setPopup] = useState<{
     open: boolean,
     project: ProjetosType
@@ -20,15 +21,25 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
 
   useEffect(() => {
     const effect = async () => {
-      const db = await fetch(url, {
+      const reqProjs = await fetch(urlProjs, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
           authorization,
         },
       });
-      const resp: { data: ProjetosType[] } = await db.json();
-      const sortedByLength = resp.data.sort((a, b) => a.title.length - b.title.length);
+      const reqTecs = await fetch(urlTecs, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          authorization,
+        },
+      });
+      const respProjs: { data: ProjetosType[] } = await reqProjs.json();
+      const sortedByLength = respProjs.data
+        .sort((a, b) => a.title.length - b.title.length);
+      const respTecs: { data: TecnologiaType[] } = await reqTecs.json();
+      setTecnologias(respTecs.data);
       setProjects(sortedByLength);
     };
     effect();
@@ -63,7 +74,7 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
           ${detail ? 'md:border-r-2' : 'overflow-y-hidden w-full'}` }
           >
 
-            {detail ? (
+            {detail && tecnologias.length > 0 ? (
               <div
                 className="flex flex-col overflow-x-auto w-full gap-1
               justify-around flex-wrap h-96 md:overflow-x-hidden md:flex-row md:h-full"
