@@ -116,8 +116,8 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
         >
           <div
             className="w-[80%] h-[80%] relative z-[100]
-          bg-black border-white border-2 rounded-md
-           text-base p-2 md:text-2xl md:p-10 text-center"
+          bg-black border-white border-2 rounded-md flex flex-col justify-between
+           text-base p-5 md:text-2xl md:p-10 text-center"
           >
             <button
               onClick={ () => setPopup({ open: false, project: {} as ProjetosType }) }
@@ -148,20 +148,28 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
             </div>
 
             <div className="flex flex-col text-center">
-              <Link
-                className="hover:text-blue-200 transition-all"
-                target="_blank"
-                to={ popup.project.gitHub }
-              >
-                Link para o código
-              </Link>
-              <Link
-                className="hover:text-blue-200 transition-all"
-                target="_blank"
-                to={ popup.project.url }
-              >
-                Link para o web site
-              </Link>
+              {popup.project.gitHub.length > 5 ? (
+                <Link
+                  className="hover:text-blue-200 transition-all"
+                  target="_blank"
+                  to={ popup.project.gitHub }
+                >
+                  Link para o código
+                </Link>
+              ) : (
+                <h3>Código indisponível</h3>
+              )}
+              {popup.project.url.length > 5 ? (
+                <Link
+                  className="hover:text-blue-200 transition-all"
+                  target="_blank"
+                  to={ popup.project.url }
+                >
+                  Link para o web site
+                </Link>
+              ) : (
+                <h3>Web site indisponível</h3>
+              )}
             </div>
           </div>
         </div>
