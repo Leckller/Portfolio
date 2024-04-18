@@ -12,6 +12,7 @@ const urlTecs = import.meta.env.VITE_TECS;
 
 function DetailsTecnologias({ detail }: { detail: boolean }) {
   const [projects, setProjects] = useState<ProjetosType[]>([]);
+  const [animate, setAnimate] = useState(false);
   const [tecnologias, setTecnologias] = useState<TecnologiaType[]>([]);
   const [popup, setPopup] = useState<{
     open: boolean,
@@ -112,15 +113,22 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
       {popup.open && (
         <div
           className="fixed top-0 w-[100%] h-[100%] transition-all
-          flex flex-col items-center justify-center pt-4 "
+          flex flex-col items-center justify-center pt-4"
         >
           <div
-            className="w-[80%] h-[80%] relative z-[100]
-          bg-black border-white border-2 rounded-md flex flex-col justify-between
-           text-base p-5 md:text-2xl md:p-10 text-center"
+            className={ `w-[80%] h-[80%] relative z-[100]
+            bg-black border-white border-2 rounded-md flex flex-col justify-between
+             text-base p-5 md:text-2xl md:p-10 text-center
+             ${animate ? 'animate-rightTo' : 'animate-leftTo'} transition-all` }
           >
             <button
-              onClick={ () => setPopup({ open: false, project: {} as ProjetosType }) }
+              onClick={ () => {
+                setAnimate(true);
+                setTimeout(() => {
+                  setPopup({ open: false, project: {} as ProjetosType });
+                  setAnimate(false);
+                }, 1000);
+              } }
               className="absolute top-3 right-4 font-extrabold scale-125"
             >
               X
