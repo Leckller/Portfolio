@@ -13,10 +13,34 @@ export default {
         surgir: {
           '0%': { filter: 'opacity(0%)' },
           '100%': { filter: 'opacity(100%)' }
+        },
+        leftTo: {
+          '0%': {
+            filter: 'opacity(0%)',
+            transition: 'cubic-bezier(0,.56,1,.23)',
+            transform: 'translateX(-500px)',
+          },
+          '100%': {
+            filter: 'opacity(100%)',
+          }
+        },
+        rightTo: {
+          '0%': {
+            transition: 'cubic-bezier(0,.56,1,.23)',
+            transform: 'translateX(0)'
+          },
+          '70%': {
+            filter: 'opacity(0%)'
+          },
+          '100%': {
+            transform: 'translateX(200%)',
+          }
         }
       },
       animation: {
-        surgir: 'surgir 1s'
+        surgir: 'surgir 1s',
+        leftTo: 'leftTo 1s',
+        rightTo: 'rightTo 1s'
       }
     },
   },
