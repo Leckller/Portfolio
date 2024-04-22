@@ -4,7 +4,7 @@ const aparecer = keyframes`
   from {
       filter: opacity(0);
     }
-    to {
+    to {'
       filter: opacity(100)
     }  
 `;

@@ -78,7 +78,7 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
             {detail && tecnologias.length > 0 ? (
               <div
                 className="flex flex-col overflow-x-auto w-full gap-1
-              justify-around flex-wrap h-96 md:overflow-x-hidden md:flex-row md:h-full"
+               flex-wrap h-[280px] md:overflow-x-hidden md:flex-row md:h-full"
               >
                 {tecnologias && tecnologias.slice(0, writeimages).map((tec) => {
                   if (writeimages >= tecnologias.length / 2) toggleEndF(true);
