@@ -63,7 +63,7 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
           willClose: () => {
             clearInterval(timerInterval);
           },
-        }).then((result) => {
+        }).then(() => {
           window.location.reload();
         });
       }
