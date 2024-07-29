@@ -40,7 +40,7 @@ export default {
       animation: {
         surgir: 'surgir 1s',
         leftTo: 'leftTo 1s',
-        rightTo: 'rightTo 1s'
+        rightTo: 'rightTo 1s',
       }
     },
   },

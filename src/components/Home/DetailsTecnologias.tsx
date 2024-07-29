@@ -8,6 +8,7 @@ import useWriteText from '../../hooks/useWriteText';
 import CardDetails from './CardDetails';
 import AppContext from '../../Context/AppContext';
 import { ProjetosType, TecnologiaType } from '../../types';
+import Loading from '../Loading';
 
 const authorization = import.meta.env.VITE_SECRET;
 const urlProjs = import.meta.env.VITE_PROJS;
@@ -16,6 +17,7 @@ const urlTecs = import.meta.env.VITE_TECS;
 function DetailsTecnologias({ detail }: { detail: boolean }) {
   const [projects, setProjects] = useState<ProjetosType[]>([]);
   const [animate, setAnimate] = useState(false);
+  const [load, setLoad] = useState(false);
   const [tecnologias, setTecnologias] = useState<TecnologiaType[]>([]);
   const [popup, setPopup] = useState<{
     open: boolean,
@@ -25,6 +27,7 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
 
   useEffect(() => {
     const effect = async () => {
+      setLoad(true);
       try {
         const reqProjs = await fetch(urlProjs, {
           method: 'GET',
@@ -67,6 +70,7 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
           window.location.reload();
         });
       }
+      setLoad(false);
     };
     effect();
   }, []);
@@ -79,6 +83,10 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
   const write = useWriteText(title, 40);
   const writeimages = useWriteText(tecnologias, 300);
   const { toggleEndF } = useContext(AppContext);
+
+  if (load) {
+    return <Loading />;
+  }
 
   return (
     <>
@@ -99,7 +107,6 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
           items-center justify-around gap-2 mb-16 
           ${detail ? 'md:border-r-2' : 'overflow-y-hidden w-full'}` }
           >
-
             {detail && tecnologias.length > 0 ? (
               <div
                 className="flex flex-col overflow-x-auto w-full gap-1
