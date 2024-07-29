@@ -1,6 +1,9 @@
+/* eslint-disable max-len */
+/* eslint-disable complexity */
 import { FaArrowAltCircleDown } from 'react-icons/fa';
 import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import useWriteText from '../../hooks/useWriteText';
 import CardDetails from './CardDetails';
 import AppContext from '../../Context/AppContext';
@@ -22,26 +25,48 @@ function DetailsTecnologias({ detail }: { detail: boolean }) {
 
   useEffect(() => {
     const effect = async () => {
-      const reqProjs = await fetch(urlProjs, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          authorization,
-        },
-      });
-      const reqTecs = await fetch(urlTecs, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          authorization,
-        },
-      });
-      const respProjs: { data: ProjetosType[] } = await reqProjs.json();
-      const sortedByLength = respProjs.data
-        .sort((a, b) => a.title.length - b.title.length);
-      const respTecs: { data: TecnologiaType[] } = await reqTecs.json();
-      setTecnologias(respTecs.data);
-      setProjects(sortedByLength);
+      try {
+        const reqProjs = await fetch(urlProjs, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            authorization,
+          },
+        });
+        const reqTecs = await fetch(urlTecs, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            authorization,
+          },
+        });
+        const respProjs: { data: ProjetosType[] } = await reqProjs.json();
+        const sortedByLength = respProjs.data
+          .sort((a, b) => a.title.length - b.title.length);
+        const respTecs: { data: TecnologiaType[] } = await reqTecs.json();
+        setTecnologias(respTecs.data);
+        setProjects(sortedByLength);
+      } catch (err) {
+        let timerInterval: string | number | NodeJS.Timeout | undefined;
+        Swal.fire({
+          title: 'Parece que o servidor estava tirando um cochilo...',
+          html: 'aguarde alguns segundos enquanto o acordamos!\n <b></b>',
+          timer: 5000,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading();
+            const timer = (Swal.getPopup() as HTMLElement).querySelector('b');
+            timerInterval = setInterval(() => {
+              (timer as HTMLElement).textContent = `${Swal.getTimerLeft()}`;
+            }, 100);
+          },
+          willClose: () => {
+            clearInterval(timerInterval);
+          },
+        }).then(() => {
+          window.location.reload();
+        });
+      }
     };
     effect();
   }, []);
