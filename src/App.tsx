@@ -1,27 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
-import { createGlobalStyle } from 'styled-components';
-import Home from './pages/Home';
 import './index.css';
-import Layout from './components/Layout';
-import Contact from './pages/Contact';
+import Home from './Pages/Home/Home';
 
 function App() {
-  const GlobalStyle = createGlobalStyle`
-    *{
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-    }
-  `;
   return (
-    <>
-      <GlobalStyle />
-      <Routes>
-        <Route element={ <Layout /> }>
-          <Route path="/" element={ <Home /> } />
-          <Route path="/contact" element={ <Contact /> } />
-        </Route>
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={ <Home /> } />
+    </Routes>
   );
 }
 
