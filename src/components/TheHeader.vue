@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header id="header">
     <div class="header-div">
       <h1 class="title">Gusttavo Ruy</h1>
       <nav class="nav">
@@ -34,9 +34,12 @@
   padding: 0 10%;
 }
 
-.header {
+#header {
   border-bottom: 1px solid rgba(128, 128, 128, 0.336);
   width: 100%;
   padding: 16px;
+  position: fixed;
+  backdrop-filter: blur(8px);
 }
+
 </style>

@@ -17,6 +17,16 @@
   color: #030213;
 }
 
+h3 {
+  font-weight: lighter;
+  font-size: x-large;
+}
+
+h4 {
+  font-weight: lighter;
+  font-size: large;
+}
+
 * a {
   text-decoration: none;
 }

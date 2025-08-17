@@ -46,8 +46,8 @@ export default defineComponent({
 }
 
 .img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 9999px;
 }
 
