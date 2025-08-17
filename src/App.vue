@@ -19,7 +19,7 @@
 
 h3 {
   font-weight: lighter;
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 h4 {
