@@ -4,9 +4,20 @@
 
 <style>
 #app {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #030213;
+}
+
+* a {
+  text-decoration: none;
+}
+
 </style>

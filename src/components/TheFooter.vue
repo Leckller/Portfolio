@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <small> © 2025 João Silva. Todos os direitos reservados. </small>
+    <small> © 2025 Gusttavo Ruy. Todos os direitos reservados. </small>
 
     <section>
       <RouterLink to="https://github.com/Leckller"> github </RouterLink>

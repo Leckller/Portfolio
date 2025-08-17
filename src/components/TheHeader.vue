@@ -1,13 +1,15 @@
 <template>
   <header class="header">
-    <h1 class="title">Gusttavo Ruy</h1>
-    <nav class="nav">
-      <RouterLink to="#sobre"> Sobre </RouterLink>
-      <RouterLink to="#habilidades"> Habilidades </RouterLink>
-      <RouterLink to="#projetos"> Projetos </RouterLink>
-      <RouterLink to="#experiencia"> Experiência </RouterLink>
-      <RouterLink to="#contato"> Contato </RouterLink>
-    </nav>
+    <div class="header-div">
+      <h1 class="title">Gusttavo Ruy</h1>
+      <nav class="nav">
+        <RouterLink to="#sobre"> Sobre </RouterLink>
+        <RouterLink to="#habilidades"> Habilidades </RouterLink>
+        <RouterLink to="#projetos"> Projetos </RouterLink>
+        <RouterLink to="#experiencia"> Experiência </RouterLink>
+        <RouterLink to="#contato"> Contato </RouterLink>
+      </nav>
+    </div>
   </header>
 </template>
 
@@ -21,8 +23,20 @@
 }
 .nav {
   display: flex;
+  gap: 16px;
 }
+
+.header-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+
 .header {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.336);
+  width: 100%;
+  padding: 16px;
 }
 </style>
