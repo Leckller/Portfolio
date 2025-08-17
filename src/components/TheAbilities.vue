@@ -1,0 +1,26 @@
+<template>
+  <section>
+    <article>
+      <h3>Frontend</h3>
+      <div>
+        <p>React</p>
+        <p>Vue.js</p>
+        <p>Tailwind</p>
+        <p>Styled-Components</p>
+        <p>Typescript</p>
+        <p>Javascript</p>
+      </div>
+    </article>
+    <article>
+      <h3>Backend</h3>
+      <div>
+        <p>Nest</p>
+        <p>Express</p>
+        <p>Docker</p>
+        <p>Java</p>
+        <p>Spring</p>
+        <p>Node.js</p>
+      </div>
+    </article>
+  </section>
+</template>

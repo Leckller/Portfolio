@@ -11,11 +11,11 @@
     </p>
     <article>
       <div>
-        <v-icon name="bi-music-player" />
+        <i class="fa-solid fa-code"></i>
         Frontend Development
       </div>
       <div>
-        <v-icon name="bi-music-player" />
+        <i class="fa-solid fa-server"></i>
         Backend Development
       </div>
     </article>

@@ -6,8 +6,8 @@
 
     <p class="text">
       Transformo ideias em soluções digitais sob medida. Especialista no
-      desenvolvimento de aplicações <strong>web</strong> modernas e
-      <strong>APIs</strong> escaláveis, focadas em performance e inovação.
+      desenvolvimento de aplicações web modernas e
+      APIs escaláveis, focadas em performance e inovação.
     </p>
 
     <div>
@@ -22,21 +22,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 50px 0;
   gap: 16px;
+  width: 60%;
+  min-width: 320px;
 }
 
 .img {
-  width: 50px;
-  height: 50px;
+  width: 200px;
+  height: 200px;
   border-radius: 9999px;
 }
 
-.h1 {
-  font-size: xx-large;
-  font-weight: bold;
+.title {
+  font-size: 40px;
+  font-weight: lighter;
 }
 
-.p {
-  color: rgba(128, 128, 128, 0.726);
+.text {
+  color: gray;
 }
 </style>
