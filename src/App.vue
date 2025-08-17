@@ -21,4 +21,6 @@
   text-decoration: none;
 }
 
+html { scroll-behavior: smooth; }
+
 </style>
