@@ -2,7 +2,7 @@
   <section id="contato">
     <h3 class="title">Entre em Contato</h3>
 
-    <div>
+    <div class="content">
       <div class="details">
         <h4 class="sub-title">Vamos conversar!</h4>
         <p class="text">
@@ -13,7 +13,10 @@
           <i class="fa-solid fa-envelope"></i>
           gusttavoruynascimento@gmail.com
         </p>
-        <p class="contato-info">+55 (21) 984255938</p>
+        <p class="contato-info">
+          <i class="fa-solid fa-phone"></i>
+          +55 (21) 984255938
+        </p>
         <p class="contato-info">
           <i class="fa-brands fa-linkedin"></i>
           www.linkedin.com/in/gusttavoruy
@@ -45,21 +48,74 @@
 
 <style scoped>
 #contato {
+  width: 100%;
+  padding: 70px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.082);
+  gap: 32px;
 }
-.title {
+.content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.details,
+.form {
+  width: 50%;
+  max-width: 400px;
+  min-width: 300px;
 }
 .details {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
 }
+.details p,
+.details h4 {
+  display: flex;
+  gap: 8px;
+  align-items: start;
+  justify-content: start;
+  width: 100%;
+  text-align: start;
+}
+
 .sub-title {
+  font-size: x-large;
 }
 .text {
-}
-.contato-info {
+  padding-top: 16px;
+  color: gray;
+  padding-bottom: 16px;
 }
 .form {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
 }
 .label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: start;
 }
 .input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: rgba(128, 128, 128, 0.082);
+  border: none;
+}
+.form-button {
+  border: none;
+  padding: 8px 12px;
+  background-color: #030213;
+  border-radius: 4px;
+  color: white;
 }
 </style>
