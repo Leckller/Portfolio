@@ -1,13 +1,15 @@
 <template>
   <header id="header">
     <div class="header-div">
-      <h1 class="title">Gusttavo Ruy</h1>
+      <a href="#apresentacao">
+        <h1 class="title">Gusttavo Ruy</h1>
+      </a>
       <nav class="nav">
-        <RouterLink to="#sobre"> Sobre </RouterLink>
-        <RouterLink to="#habilidades"> Habilidades </RouterLink>
-        <RouterLink to="#projetos"> Projetos </RouterLink>
-        <RouterLink to="#experiencia"> Experiência </RouterLink>
-        <RouterLink to="#contato"> Contato </RouterLink>
+        <a href="#sobre"> Sobre </a>
+        <a href="#habilidades"> Habilidades </a>
+        <a href="#projetos"> Projetos </a>
+        <a href="#experiencia"> Experiência </a>
+        <a href="#contato"> Contato </a>
       </nav>
     </div>
   </header>
@@ -40,6 +42,6 @@
   padding: 16px;
   position: fixed;
   backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.678);
 }
-
 </style>

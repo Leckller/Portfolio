@@ -1,5 +1,5 @@
 <template>
-  <section id="professional-experience">
+  <section id="experiencia">
     <article class="experience-card">
       <div class="experience-card-header">
         <div class="enterprise">
@@ -30,7 +30,7 @@
 </template>
 
 <style scoped>
-#professional-experience {
+#experiencia {
 }
 
 .experience-card {

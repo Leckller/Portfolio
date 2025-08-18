@@ -32,7 +32,7 @@
 <style scoped>
 #sobre {
   width: 100%;
-  padding: 50px 0;
+  padding: 70px 0;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -10,7 +10,7 @@ export default defineComponent({
 
 
 <template>
-  <section class="section">
+  <section id="apresentacao">
     <img class="img" src="../assets/ruy.jpg" alt="RuyPicture" />
 
     <h1 class="title">Desenvolvedor Full Stack</h1>
@@ -35,11 +35,11 @@ export default defineComponent({
 </template>
 
 <style scoped>
-.section {
+#apresentacao {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0;
+  padding: 70px 0;
   gap: 16px;
   width: 60%;
   min-width: 320px;

@@ -41,7 +41,7 @@
 
 <style scoped>
 #habilidades {
-  padding: 50px 0;
+  padding: 70px 0;
   display: flex;
   gap: 32px;
   width: 100%;
