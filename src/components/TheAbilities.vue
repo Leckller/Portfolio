@@ -51,6 +51,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  margin-top: 20px;
   flex-wrap: wrap;
   gap: 24px;
 }

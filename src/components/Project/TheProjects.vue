@@ -47,6 +47,7 @@ export default defineComponent({
 }
 
 .projetos {
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

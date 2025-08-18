@@ -1,5 +1,6 @@
 <template>
   <section id="experiencia">
+    <h2>Experiência Profissional</h2>
     <article class="experience-card">
       <div class="experience-card-header">
         <div class="enterprise">
@@ -40,6 +41,7 @@
 
 .experience-card {
   display: flex;
+  margin-top: 32px;
   border: 1px solid gainsboro;
   border-radius: 16px;
   padding: 16px;
