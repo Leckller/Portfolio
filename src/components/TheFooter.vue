@@ -1,19 +1,16 @@
 <template>
-  <footer>
-    <small> © 2025 Gusttavo Ruy. Todos os direitos reservados. </small>
+  <footer class="footer">
+    <small class="direitos"> © 2025 Gusttavo Ruy. Todos os direitos reservados. </small>
 
-    <section>
-      <RouterLink to="https://github.com/Leckller">
+    <section class="section">
+      <RouterLink class="sites" to="https://github.com/Leckller">
         <i class="fa-brands fa-github"></i>
-        github
       </RouterLink>
-      <RouterLink to="https://www.linkedin.com/in/gusttavoruy">
+      <RouterLink class="sites" to="https://www.linkedin.com/in/gusttavoruy">
         <i class="fa-brands fa-linkedin"></i>
-        linkedin
       </RouterLink>
-      <RouterLink to="mailto:gusttavoruynascimento@gmail.com">
+      <RouterLink class="sites" to="mailto:gusttavoruynascimento@gmail.com">
         <i class="fa-solid fa-envelope"></i>
-        email
       </RouterLink>
     </section>
   </footer>
@@ -25,8 +22,25 @@ import { RouterLink } from "vue-router";
 
 export default defineComponent({
   components: { RouterLink },
-  data() {
-    return {};
-  },
 });
 </script>
+
+<style scoped>
+
+.footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 40px 20px;
+  justify-content: space-around;
+}
+.direitos {
+  color: gray;
+}
+.section {
+  display: flex;
+  gap: 16px;
+}
+.sites {}
+
+</style>
