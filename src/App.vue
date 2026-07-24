@@ -1,36 +1,11 @@
+<script setup lang="ts"></script>
+
 <template>
-  <router-view/>
+  <h1>You did it!</h1>
+  <p>
+    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
+    documentation
+  </p>
 </template>
 
-<style>
-#app {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-align: center;
-  color: #030213;
-}
-
-h3 {
-  font-weight: lighter;
-  font-size: x-large;
-}
-
-h4 {
-  font-weight: lighter;
-  font-size: large;
-}
-
-* a {
-  text-decoration: none;
-}
-
-html { scroll-behavior: smooth; }
-
-</style>
+<style scoped></style>
